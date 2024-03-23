@@ -1,0 +1,13 @@
+steps:
+  # Build the Go API
+  - name: 'golang:1.17'
+    entrypoint: 'go'
+    args: ['build', '-o', 'app']
+    dir: '/workspace'
+  # Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-go-api', '.']
+    dir: '/workspace'
+  # Push Docker image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/my-go-api']

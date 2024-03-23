@@ -86,3 +86,9 @@ The API will respond with the following attributes for the queried article in JS
   "story": "Elon Musk, the chief executive officer of Tesla and the world's richest person, has said he was terminating his $44 billion deal to buy Twitter because the social media company had breached multiple provisions of the merger agreement..."
 }
 ```
+
+### To Run With Docker
+```bash
+docker build -t my-go-api .
+docker run -p 3000:3000 my-go-api
+```
