@@ -9,6 +9,8 @@ COPY go.mod .
 COPY go.sum .
 RUN go mod download
 
+# Set GIN_MODE environment variable to "release"
+ENV GIN_MODE=release
 # Copy the rest of the application source code
 COPY . .
 
