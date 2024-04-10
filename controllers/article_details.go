@@ -50,7 +50,7 @@ func FetchLatestNews(c *gin.Context) {
 	cly.Visit("https://www.dawn.com/latest-news")
 	enc := json.NewEncoder(os.Stdout)
 	enc.SetIndent("", "  ")
-	fmt.Println(articles)
+	//fmt.Println(articles)
 	// Dump json to the standard output
 	//enc.Encode(articles)
 	c.JSON(http.StatusOK, articles)

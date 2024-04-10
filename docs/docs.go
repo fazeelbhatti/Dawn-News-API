@@ -118,7 +118,7 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0",
-	Host:             "localhost:8080",
+	Host:             "dawn-news-api-a64pqlujgq-uc.a.run.app", //localhost:8080"//https://
 	BasePath:         "/api/v1",
 	Schemes:          []string{},
 	Title:            "Dawn News Web Scraper API",
